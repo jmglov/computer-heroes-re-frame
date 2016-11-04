@@ -16,5 +16,5 @@
                        39 "right"
                        40 "down"
                        nil)]
-     (assoc db :name key-name)
+     (assoc db :debug-msg (str key-name " pressed"))
      db)))

@@ -3,6 +3,11 @@
     (:require [re-frame.core :as re-frame]))
 
 (re-frame/reg-sub
- :name
+ :debug-msg
  (fn [db]
-   (:name db)))
+   (:debug-msg db)))
+
+(re-frame/reg-sub
+ :hero
+ (fn [db]
+   (:hero db)))
