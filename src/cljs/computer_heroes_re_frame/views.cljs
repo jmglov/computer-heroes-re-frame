@@ -9,11 +9,13 @@
   (let [hero (re-frame/subscribe [:hero])
         {:keys [width height]} config/hero]
     (fn []
-      [:img {:src "img/2tone.jpg"
-             :width (px width)
-             :height (px height)
-             :style {:position "absolute"
-                     :bottom "0px"}}])))
+      (let [{:keys [x y]} @hero]
+        [:img {:src "img/2tone.jpg"
+               :width (px width)
+               :height (px height)
+               :style {:position "absolute"
+                       :left (px x)
+                       :bottom (px y)}}]))))
 
 (defn screen []
   (let [{:keys [width height]} config/screen]

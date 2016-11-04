@@ -9,4 +9,5 @@
 
 (def hero
   {:width 100
-   :height 152})
+   :height 152
+   :speed 32})
